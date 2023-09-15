@@ -1,6 +1,9 @@
 import React from 'react'
 import './trans.css'
+
 import Content from '../content/Content'
+import { GitHub } from '@mui/icons-material'
+import { Link } from 'react-router-dom'
 
 
 function Trans({transcript,videoId}) {
@@ -8,7 +11,16 @@ function Trans({transcript,videoId}) {
   return (
     <div className='transContainer'>
       <div className="home">
-        <span className='homeText'>Home</span>
+        <span className='homeText'>Source code</span>
+         <div className="icon">
+         <a href='https://github.com/harshit91796/Video_to_transcripy'><GitHub color='white' fontSize='large'  className='git'/></a>
+          <span>Frontend</span>
+         </div>
+         <div className="icon">
+         <a href='https://github.com/harshit91796/Video_to_transcript_backend'><GitHub fontSize='large'  className='git'/></a>
+           <span>Backend</span>
+         </div>
+        
       </div>
       <div className="videoContainer">
            <div className="video">

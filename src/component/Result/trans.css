@@ -6,6 +6,7 @@
 
 .homeText{
     font-size: 3rem;
+    
 }
 
 .videoContainer{
@@ -32,4 +33,24 @@ iframe{
 }
 .home{
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon{
+   
+   
+    height: 80px;
+    width: 90px;
+}
+
+.git{
+    margin-top: 10px;
+    height: 100%;
+    width: 100%;
+} 
+
+.a{
+    text-decoration: none;
 }
