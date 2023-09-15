@@ -1,0 +1,114 @@
+.container{
+    background-color: #bbeeee;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+.ref{
+    height: 100%;
+}
+
+.img{
+    width: 100%;
+    height: 100%;
+}
+.box{
+    display: flex;
+    height: 80%;
+    width: 800px;
+    position: absolute;
+    top: 10%;
+    margin-left: 20%;
+   
+
+}
+
+.left{
+    background-color: #e29c40e4;
+    flex: 5;
+}
+
+.right{
+    /* background-color: blueviolet; */
+    flex: 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0.5rem 2rem 0 rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(0.25rem);
+}
+
+.form{
+    /* background-color: bisque; */
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    
+    
+}
+
+.formInput{
+    width:  90%;
+    height: 70%;
+    margin-left: 20px;
+}
+
+.formButton{
+    width:  90%;
+    height: 70%;
+    margin-left: 20px;
+}
+
+#input{
+   width: 100%;
+   height: 30%;
+}
+
+#button{
+    width: 30%;
+    height: 40%;
+    background-color: #f3f1eee4;
+    color: #e29c40e4;
+ 
+
+}
+
+#button {
+    /* background-color: #0a89e3;  */
+   
+    /* padding: 10px 20px; */
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.5s ease; /* Add a smooth transition effect */
+  }
+ 
+  
+  #button:hover {
+   
+        background-color: #ebb062e4;
+        color: white;
+
+    animation: glowing 1s infinite; /* Apply the glowing animation on hover */
+  }
+
+  #button:focus{
+    outline: none;
+  }
+  #button:disabled{
+    cursor: not-allowed;
+  }
+  
+  @keyframes glowing {
+    0% {
+      box-shadow: 0 0 10px #e88709e4; /* Initial shadow color (blue in this example) */
+    }
+    50% {
+      box-shadow: 0 0 20px #e2860ce4, 0 0 30px #e29c40e4; /* Midway shadow color */
+    }
+    100% {
+      box-shadow: 0 0 10px #cc7605e4; /* Final shadow color */
+    }
+  }
