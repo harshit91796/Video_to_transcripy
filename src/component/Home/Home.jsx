@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react'
 import './home.css'
 import Trans from '../Result/Trans'
 import axiosInstance from '../../api';
+import axios from 'axios';
 
 function Home() {
     const [videoLink,setVideoLink] = useState('');
@@ -41,7 +42,13 @@ function Home() {
 
           try {
             const videoId = extractVideoId(videoLink);
-            const response = await axiosInstance.get(`/?video_id=${videoId}&lang=en`)
+            // const response = await axiosInstance.get(`/?video_id=${videoId}&lang=en`)
+            const response = await axios.get(`https://youtube-transcriptor.p.rapidapi.com/transcript?video_id=${videoId}&lang=en`, {
+              headers: {
+                'X-RapidAPI-Key': 'b35f0a8980mshfc940de92f14ad0p15b73bjsn48f6967e6738',
+                'X-RapidAPI-Host': 'youtube-transcriptor.p.rapidapi.com',
+              },
+            });
             
             if(!response){
                 console.log('no data')
@@ -72,7 +79,7 @@ function Home() {
     console.log(link)
   return (
     <div className='container' >
-      <img className='img' src='/public/assets/transjpg.jpg'/>
+      <img className='img' src='assets/transjpg.jpg'/>
          <div className="box">
             <div className="left">
                <h1>Video to Transcript</h1>
