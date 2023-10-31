@@ -49,8 +49,11 @@ iframe{
     margin-top: 10px;
     height: 100%;
     width: 100%;
+    text-decoration: none;
 } 
 
-.a{
+.gitHublink{
     text-decoration: none;
+    color: aliceblue;
 }
+
